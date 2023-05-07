@@ -21,25 +21,79 @@
 List of Database Management Laboratory Programs included in the repository:
 
 <p align="justify"> 
-Program 1 • Write a JavaScript to design a simple calculator to perform the following operations: sum, product, difference and quotient.
+Program 1 • Consider the following schema for a Library Database: <br>
+BOOK(Book_id, Title, Publisher_Name, Pub_Year) <br>
+BOOK_AUTHORS(Book_id, Author_Name) <br>
+PUBLISHER(Name, Address, Phone) <br>
+BOOK_COPIES(Book_id, Programme_id, No-of_Copies) <br>
+BOOK_LENDING(Book_id, Programme_id, Card_No, Date_Out, Due_Date) <br>
+LIBRARY_PROGRAMME(Programme_id, Programme_Name, Address) <br>
+Write SQL queries to <br>
+1. Retrieve details of all books in the library – id, title, name of publisher, authors, number of copies in each Programme, etc. <br>
+2. Get the particulars of borrowers who have borrowed more than 3 books, but from Jan 2017 to Jun 2017.<br>
+3. Delete a book in BOOK table. Update the contents of other tables to reflect this data manipulation operation. <br>
+4. Partition the BOOK table based on year of publication. Demonstrate its working with a simple query. <br>
+5. Create a view of all books and its number of copies that are currently available in the Library. <br>
 </p>
 
 <p align="justify"> 
-Program 2 • Write a JavaScript that calculates the squares and cubes of the numbers from 0 to 10 and outputs HTML text that displays the resulting values in an HTML table format.
+Program 2 • Consider the following schema for Order Database: <br>
+SALESMAN(Salesman_id, Name, City, Commission) <br>
+CUSTOMER(Customer_id, Cust_Name, City, Grade, Salesman_id) <br>
+ORDERS(Ord_No, Purchase_Amt, Ord_Date, Customer_id, Salesman_id) <br>
+Write SQL queries to <br>
+1. Count the customers with grades above Bangalore’s average. <br>
+2. Find the name and numbers of all salesman who had more than one customer. <br>
+3. List all the salesman and indicate those who have and do not have customers in their cities (Use UNION operation). <br>
+4. Create a view that finds the salesman who has the customer with the highest order of a day. <br>
+5. Demonstrate the DELETE operation by removing salesman with id 1000. All his orders must also be deleted. <br>
 </p>
 
 <p align="justify"> 
-Program 3 • Write a JavaScript code that displays text “TEXT-GROWING” with increasing font size in the interval of 100ms in RED COLOR, when the font size reaches 50pt it displays “TEXT-SHRINKING” in BLUE color. Then the font size decreases to 5pt.
+Program 3 •Consider the schema for Movie Database: <br>
+ACTOR(Act_id, Act_Name, Act_Gender) <br>
+DIRECTOR(Dir_id, Dir_Name, Dir_Phone) <br>
+MOVIES(Mov_id, Mov_Title, Mov_Year, Mov_Lang, Dir_id) <br>
+MOVIE_CAST(Act_id, Mov_id, Role) <br>
+RATING(Mov_id, Rev_Stars) <br>
+Write SQL queries to <br>
+1. List the titles of all movies directed by ‘Hitchcock’. <br>
+2. Find the movie names where one or more actors acted in two or more movies. <br>
+3. List all actors who acted in a movie before 2000 and in a movie after 2015 (use JOIN operation). <br>
+4. Find the title of movies and number of stars for each movie that has at least one rating and find the highest number of stars that movie received. Sort the result by movie title. <br>
+5. Update rating of all movies directed by ‘Steven Spielberg’ to 5. <br>
 </p>
 
 <p align="justify"> 
-Program 4 • Develop and demonstrate a HTML5 file that includes JavaScript script that uses functions for the following problems:<br>
-a) Parameter: A string <br>
-b) Output: The position in the string of the left-most vowel<br>
-c) Parameter: A number<br>
-d) Output: The number with its digits in the reverse order<br>
+Program 4 • Consider the schema for College Database: <br>
+STUDENT(USN, SName, Address, Phone, Gender) <br>
+SEMSEC(SSID, Sem, Sec) <br>
+CLASS(USN, SSID) <br>
+COURSE(Subcode, Title, Sem, Credits) <br>
+IAMARKS(USN, Subcode, SSID, Test1, Test2, Test3, FinalIA) <br>
+Write SQL queries to <br>
+1. List all the student details studying in fourth semester ‘C’ section. <br>
+2. Compute the total number of male and female students in each semester and in each section. <br>
+3. Create a view of Test1 marks of student USN ‘1BI15CS101’ in all Courses. <br>
+4. Calculate the FinalIA (average of best two test marks) and update the corresponding table for all students. <br>
+5. Categorize students based on the following criterion: <br>
+If FinalIA = 17 to 20 then CAT = ‘Outstanding’ <br>
+If FinalIA = 12 to 16 then CAT = ‘Average’ <br>
+If FinalIA< 12 then CAT = ‘Weak’ <br>
+Give these details only for 8th semester A, B, and C section students. <br>
 </p>
 
 <p align="justify"> 
-Program 5 • Design an XML document to store information about a student in an engineering college affiliated to VTU. The information must include USN, Name, and Name of the College, Branch, Year of Joining, and email id. Make up sample data for 3students. Create a CSS style sheet and use it to display the document.
+Program 5 • Consider the schema for Company Database: <br>
+EMPLOYEE(SSN, Name, Address, Sex, Salary, SuperSSN, DNo) <br>
+DEPARTMENT(DNo, DName, MgrSSN, MgrStartDate) <br>
+DLOCATION(DNo,DLoc) <br>
+PROJECT(PNo, PName, PLocation, DNo) <br>
+WORKS_ON(SSN, PNo, Hours) <br>
+Write SQL queries to <br>
+1. Make a list of all project numbers for projects that involve an employee whose last name is ‘Scott’, either as a worker or as a manager of the department that controls the project. <br>
+2. Show the resulting salaries if every employee working on the ‘IoT’ project is given a 10 percent raise. <br>
+3. Find the sum of the salaries of all employees of the ‘Accounts’ department, as well as the maximum salary, the minimum salary, and the average salary in this department. <br>
+4. Retrieve the name of each employee who works on all the projects controlled by department number 5 (use NOT EXISTS operator). <br> 
+5. For each department that has more than five employees, retrieve the department number and the number of its employees who are making more than Rs. 6,00,000. <br>
 </p>
